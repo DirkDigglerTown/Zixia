@@ -149,6 +149,7 @@
             display: flex;
             gap: 30px;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
@@ -172,6 +173,45 @@
 
         .nav-links a:hover::after {
             width: 100%;
+        }
+
+        .nav-social {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-left: 30px;
+            padding-left: 30px;
+            border-left: 1px solid rgba(44, 62, 46, 0.2);
+        }
+
+        .nav-social-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 24px;
+            line-height: 1;
+        }
+
+        .nav-social-link:hover {
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .nav-social-link img {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0.2);
+            transition: filter 0.3s ease;
+            display: block;
+        }
+
+        .nav-social-link:hover img {
+            filter: brightness(0.6) sepia(1) saturate(2) hue-rotate(20deg);
         }
 
         /* Hero Section */
@@ -472,8 +512,8 @@
                 display: none;
             }
             
-            .social-links {
-                gap: 40px;
+            .nav-social {
+                gap: 20px;
             }
         }
     </style>
@@ -499,6 +539,13 @@
             <ul class="nav-links">
                 <li><a href="http://www.chinaknowledge.de/History/Zhou/personszixia.html" target="_blank">History</a></li>
                 <li><a href="https://artsandculture.google.com/story/a-conversation-between-confucius-and-bu-shang-the-palace-museum/BgVhWzpEyzNHkw?hl=en" target="_blank">Wisdom</a></li>
+                <div class="nav-social">
+                    <a href="https://x.com/DiscipleZixia" target="_blank" class="nav-social-link">𝕏</a>
+                    <a href="#" class="nav-social-link" style="filter: grayscale(100%);">👥</a>
+                    <a href="#" class="nav-social-link">
+                        <img src="dexscreener-logo.png" alt="DEX">
+                    </a>
+                </div>
             </ul>
         </nav>
 
@@ -534,26 +581,6 @@
         <section class="classical-image-section">
             <img src="confucius-teaching.jpg" alt="Confucius teaching disciples" class="classical-image">
             <p class="image-caption">The Master beneath the apricot tree, where wisdom flows like water</p>
-        </section>
-
-        <!-- Links Section -->
-        <section class="links-section">
-            <div class="social-links">
-                <a href="https://x.com/DiscipleZixia" target="_blank" class="social-link">
-                    <span>𝕏</span>
-                    <span class="social-label">X</span>
-                </a>
-                
-                <div class="social-link coming-soon">
-                    <span>👥</span>
-                    <span class="social-label">Community</span>
-                </div>
-                
-                <div class="social-link coming-soon">
-                    <img src="dexscreener-logo.png" alt="DEX">
-                    <span class="social-label">DEX</span>
-                </div>
-            </div>
         </section>
     </div>
 
