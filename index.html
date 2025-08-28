@@ -217,13 +217,13 @@
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 80px 0 100px;
+            padding: 60px 0 80px;
             position: relative;
         }
 
         .chinese-characters {
             font-size: 4rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             opacity: 0;
             animation: slideDown 1s ease 3s forwards;
         }
@@ -241,7 +241,7 @@
 
         .main-title {
             font-size: 3.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             opacity: 0;
             animation: slideUp 1s ease 3.2s forwards;
         }
@@ -249,7 +249,7 @@
         .subtitle {
             font-size: 1.8rem;
             color: var(--accent-color);
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             opacity: 0;
             animation: slideUp 1s ease 3.4s forwards;
         }
@@ -259,7 +259,7 @@
             color: var(--text-light);
             line-height: 1.8;
             max-width: 600px;
-            margin: 0 auto 50px;
+            margin: 0 auto 40px;
             opacity: 0;
             animation: slideUp 1s ease 3.6s forwards;
         }
@@ -279,7 +279,7 @@
         .main-symbol {
             width: 200px;
             height: 200px;
-            margin: 50px auto;
+            margin: 40px auto;
             position: relative;
             opacity: 0;
             animation: fadeIn 1s ease 3.8s forwards;
@@ -413,10 +413,10 @@
 
         /* Philosophy Quote */
         .quote-section {
-            padding: 60px 0;
+            padding: 50px 0;
             text-align: center;
             background: rgba(255,255,255,0.5);
-            margin: 60px 0;
+            margin: 40px 0;
             position: relative;
         }
 
@@ -430,14 +430,14 @@
         }
 
         .quote-author {
-            margin-top: 20px;
+            margin-top: 15px;
             font-size: 1rem;
             color: var(--text-light);
         }
 
         /* Classical Image Section */
         .classical-image-section {
-            padding: 40px 20px 60px;
+            padding: 30px 20px 50px;
             text-align: center;
         }
 
@@ -450,7 +450,7 @@
         }
 
         .image-caption {
-            margin-top: 20px;
+            margin-top: 15px;
             font-size: 0.9rem;
             color: var(--text-light);
             font-style: italic;
@@ -541,10 +541,6 @@
                 <li><a href="https://artsandculture.google.com/story/a-conversation-between-confucius-and-bu-shang-the-palace-museum/BgVhWzpEyzNHkw?hl=en" target="_blank">Wisdom</a></li>
                 <div class="nav-social">
                     <a href="https://x.com/DiscipleZixia" target="_blank" class="nav-social-link">𝕏</a>
-                    <a href="#" class="nav-social-link" style="filter: grayscale(100%);">👥</a>
-                    <a href="#" class="nav-social-link">
-                        <img src="dexscreener-logo.png" alt="DEX">
-                    </a>
                 </div>
             </ul>
         </nav>
@@ -617,15 +613,8 @@
             });
         });
 
-        // Add parallax effect to main symbol
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const symbol = document.querySelector('.main-symbol');
-            if (symbol) {
-                symbol.style.transform = `translateY(${scrolled * 0.3}px)`;
-            }
-        });
-
+        // Remove parallax effect - was causing separate scrolling
+        
         // Add hover effect to coming soon cards
         document.querySelectorAll('.coming-soon').forEach(card => {
             card.addEventListener('click', (e) => {
