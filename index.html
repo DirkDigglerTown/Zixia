@@ -300,70 +300,75 @@
 
         /* Links Section */
         .links-section {
-            padding: 80px 0;
+            padding: 60px 0 80px;
             text-align: center;
         }
 
-        .links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 800px;
-            margin: 0 auto;
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
         }
 
-        .link-card {
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             background: white;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             text-decoration: none;
             color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
             position: relative;
-            overflow: hidden;
         }
 
-        .link-card::before {
-            content: '';
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            background: var(--gold);
+            color: white;
+        }
+
+        .social-link.coming-soon {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .social-link.coming-soon:hover {
+            transform: none;
+            background: white;
+            color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .social-label {
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .link-card:hover::before {
-            left: 100%;
-        }
-
-        .link-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-
-        .link-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .link-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .link-description {
-            font-size: 0.9rem;
+            bottom: -25px;
+            font-size: 0.75rem;
             color: var(--text-light);
+            white-space: nowrap;
         }
 
-        .coming-soon {
-            background: linear-gradient(135deg, #f9f9f9, #f5f5f5);
-            opacity: 0.7;
+        .social-link img {
+            width: 24px;
+            height: 24px;
+            filter: grayscale(100%) brightness(0) invert(0.2);
+        }
+
+        .social-link:hover img {
+            filter: brightness(0) invert(1);
+        }
+
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
         }
 
         /* Philosophy Quote */
@@ -446,8 +451,8 @@
                 display: none;
             }
             
-            .links-grid {
-                grid-template-columns: 1fr;
+            .social-links {
+                gap: 40px;
             }
         }
     </style>
@@ -471,9 +476,8 @@
         <nav>
             <div class="logo">子夏</div>
             <ul class="nav-links">
-                <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#wisdom">Wisdom</a></li>
-                <li><a href="#community">Community</a></li>
+                <li><a href="http://www.chinaknowledge.de/History/Zhou/personszixia.html" target="_blank">History</a></li>
+                <li><a href="https://artsandculture.google.com/story/a-conversation-between-confucius-and-bu-shang-the-palace-museum/BgVhWzpEyzNHkw?hl=en" target="_blank">Wisdom</a></li>
             </ul>
         </nav>
 
@@ -507,23 +511,20 @@
 
         <!-- Links Section -->
         <section class="links-section">
-            <div class="links-grid">
-                <a href="https://x.com/DiscipleZixia" target="_blank" class="link-card">
-                    <div class="link-icon">𝕏</div>
-                    <div class="link-title">X</div>
-                    <div class="link-description">Follow the path of wisdom</div>
+            <div class="social-links">
+                <a href="https://x.com/DiscipleZixia" target="_blank" class="social-link">
+                    <span>𝕏</span>
+                    <span class="social-label">X</span>
                 </a>
-
-                <div class="link-card coming-soon">
-                    <div class="link-icon">👥</div>
-                    <div class="link-title">Community</div>
-                    <div class="link-description">X Community - Coming Soon</div>
+                
+                <div class="social-link coming-soon">
+                    <span>👥</span>
+                    <span class="social-label">Community</span>
                 </div>
-
-                <div class="link-card coming-soon">
-                    <div class="link-icon">📊</div>
-                    <div class="link-title">DEX</div>
-                    <div class="link-description">DEXScreener - Coming Soon</div>
+                
+                <div class="social-link coming-soon">
+                    <img src="dexscreener-logo.png" alt="DEX">
+                    <span class="social-label">DEX</span>
                 </div>
             </div>
         </section>
