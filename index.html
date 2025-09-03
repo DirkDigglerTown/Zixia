@@ -202,18 +202,6 @@
             transform: translateY(-2px);
         }
 
-        .nav-social-link img {
-            width: 20px;
-            height: 20px;
-            filter: brightness(0.2);
-            transition: filter 0.3s ease;
-            display: block;
-        }
-
-        .nav-social-link:hover img {
-            filter: brightness(0.6) sepia(1) saturate(2) hue-rotate(20deg);
-        }
-
         /* Hero Section */
         .hero {
             text-align: center;
@@ -338,79 +326,6 @@
             50% { transform: translate(-50%, -50%) scale(1.05); }
         }
 
-        /* Links Section */
-        .links-section {
-            padding: 60px 0 80px;
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            text-decoration: none;
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .social-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            background: var(--gold);
-            color: white;
-        }
-
-        .social-link.coming-soon {
-            opacity: 0.4;
-            cursor: not-allowed;
-        }
-
-        .social-link.coming-soon:hover {
-            transform: none;
-            background: white;
-            color: var(--primary-color);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-
-        .social-label {
-            position: absolute;
-            bottom: -25px;
-            font-size: 0.75rem;
-            color: var(--text-light);
-            white-space: nowrap;
-        }
-
-        .social-link img {
-            width: 24px;
-            height: 24px;
-            filter: brightness(0.2);
-        }
-
-        .social-link:hover img {
-            filter: brightness(0) invert(1);
-        }
-
-        .social-link svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
-
         /* Philosophy Quote */
         .quote-section {
             padding: 50px 0;
@@ -454,6 +369,86 @@
             font-size: 0.9rem;
             color: var(--text-light);
             font-style: italic;
+        }
+
+        /* Activate Section */
+        .activate-section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .activate-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        .activate-intro {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .activate-content {
+            background: rgba(255,255,255,0.6);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .activate-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--accent-color);
+            text-align: center;
+        }
+
+        .activate-step {
+            margin-bottom: 35px;
+        }
+
+        .activate-step-title {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+        }
+
+        .activate-step-content {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-light);
+            margin-left: 25px;
+        }
+
+        .activate-list {
+            margin: 10px 0;
+            margin-left: 20px;
+        }
+
+        .activate-list li {
+            margin: 8px 0;
+            list-style: none;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .activate-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        .activate-divider {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            margin: 30px auto;
         }
 
         /* Floating particles animation */
@@ -539,6 +534,7 @@
             <ul class="nav-links">
                 <li><a href="http://www.chinaknowledge.de/History/Zhou/personszixia.html" target="_blank">History</a></li>
                 <li><a href="https://artsandculture.google.com/story/a-conversation-between-confucius-and-bu-shang-the-palace-museum/BgVhWzpEyzNHkw?hl=en" target="_blank">Wisdom</a></li>
+                <li><a href="#activate">Activate</a></li>
                 <div class="nav-social">
                     <a href="https://x.com/DiscipleZixia" target="_blank" class="nav-social-link">𝕏</a>
                 </div>
